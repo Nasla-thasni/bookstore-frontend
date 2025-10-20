@@ -85,7 +85,7 @@ const Books = () => {
       <section className="bg-gray-50 py-16 px-6 min-h-screen relative">
         {/* Popup Toast at top-center */}
         {popup && (
-          <div className="fixed top-5 left-1/2 transform -translate-x-1/2 bg-[#009999] text-white px-6 py-3 rounded-lg shadow-lg z-50 transition">
+  <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 bg-[#161b22] border-l-4 border-[#00bfa5] text-gray-200 px-6 py-4 rounded-lg shadow-xl z-50 flex items-center space-x-3 animate-slide-up">
             {popup}
           </div>
         )}

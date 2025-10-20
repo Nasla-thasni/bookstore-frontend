@@ -23,9 +23,11 @@ const Nav = () => {
         </ul>
 
         {/* Icons */}
+        
         <div className="flex space-x-5 ml-5">
           <Link to={'/cart'}>
           <FaShoppingCart className="text-xl cursor-pointer" />
+
           </Link>
           <FaUser className="text-xl cursor-pointer" />
         </div>
