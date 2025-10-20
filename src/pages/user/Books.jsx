@@ -17,7 +17,7 @@ const Books = () => {
   // Fetch books
   const fetchBooks = async () => {
     try {
-      const res = await axios.get("http://localhost:5003/books/get");
+      const res = await axios.get("https://backend-project-2-ubew.onrender.com/books/get");
       if (res.data.success) {
         setBooks(res.data.data);
       }
@@ -31,7 +31,7 @@ const Books = () => {
   // Fetch cart items
   const fetchCart = async () => {
     try {
-      const res = await axios.get("http://localhost:5003/books/cart");
+      const res = await axios.get("https://backend-project-2-ubew.onrender.com/books/cart");
       if (res.data.success) {
         setCartItems(res.data.data.map((item) => item.bookId._id));
       }
@@ -44,7 +44,7 @@ const Books = () => {
   const addToCart = async (bookId, bookTitle) => {
     if (cartItems.includes(bookId)) return;
     try {
-      const res = await axios.post("http://localhost:5003/books/cart/add", {
+      const res = await axios.post("https://backend-project-2-ubew.onrender.com/books/cart/add", {
         bookId,
         quantity: 1,
       });
