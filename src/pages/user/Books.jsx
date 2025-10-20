@@ -138,7 +138,7 @@ const Books = () => {
                     <img
                       src={
                         book.image 
-                          ? `http://localhost:5003/uploads/${book.image}`
+                          ? `https://backend-project-2-ubew.onrender.com/uploads/${book.image}`
                           : "https://via.placeholder.com/150"
                       }
                       alt={book.title}
