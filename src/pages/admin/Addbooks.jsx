@@ -49,7 +49,7 @@ const Addbooks = () => {
 
       if (imageFile) data.append("image", imageFile); // Append file
 
-      const res = await fetch("http://localhost:5003/books/add", {
+      const res = await fetch("https://backend-project-2-ubew.onrender.com/books/add", {
         method: "POST",
         body: data, // Note: no JSON.stringify, must be FormData
       });

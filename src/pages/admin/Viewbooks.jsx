@@ -11,7 +11,7 @@ const Viewbooks = () => {
   // Fetch books from backend
   const fetchBooks = async () => {
     try {
-      const res = await axios.get("http://localhost:5003/books/get");
+      const res = await axios.get("https://backend-project-2-ubew.onrender.com/books/get");
       if (res.data.success) {
         setBooks(res.data.data);
       } else {
@@ -32,7 +32,7 @@ const Viewbooks = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this book?")) {
       try {
-        await axios.delete(`http://localhost:5003/books/delete/${id}`);
+        await axios.delete(`https://backend-project-2-ubew.onrender.com/books/delete/${id}`);
         setBooks(books.filter((book) => book._id !== id));
       } catch (error) {
         console.error("Error deleting book:", error);

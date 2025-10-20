@@ -20,11 +20,11 @@ const Editbooks = () => {
   useEffect(() => {
     const fetchBook = async () => {
       try {
-        const res = await axios.get(`http://localhost:5003/books/get/${id}`);
+        const res = await axios.get(`https://backend-project-2-ubew.onrender.com/books/get/${id}`);
         if (res.data.success) {
           setFormData(res.data.data);
           if (res.data.data.image) {
-            setPreview(`http://localhost:5003/uploads/${res.data.data.image}`);
+            setPreview(`https://backend-project-2-ubew.onrender.com/uploads/${res.data.data.image}`);
           }
         }
       } catch (error) {
@@ -60,7 +60,7 @@ const Editbooks = () => {
       if (image) data.append("image", image);
 
       const res = await axios.put(
-        `http://localhost:5003/books/update/${id}`,
+        `https://backend-project-2-ubew.onrender.com/books/update/${id}`,
         data,
         {
           headers: { "Content-Type": "multipart/form-data" },

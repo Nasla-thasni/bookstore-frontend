@@ -10,7 +10,7 @@ const Cart = () => {
 
   const fetchCart = async () => {
     try {
-      const res = await axios.get("http://localhost:5003/books/cart");
+      const res = await axios.get("https://backend-project-2-ubew.onrender.com/books/cart");
       if (res.data.success) setCart(res.data.data);
     } catch (err) {
       console.error(err);
@@ -24,7 +24,7 @@ const Cart = () => {
 
   const removeItem = async (id, title) => {
     try {
-      await axios.delete(`http://localhost:5003/books/cart/remove/${id}`);
+      await axios.delete(`https://backend-project-2-ubew.onrender.com/books/cart/remove/${id}`);
       fetchCart();
       showPopup(`❌ "${title}" removed from cart`);
     } catch {
@@ -34,7 +34,7 @@ const Cart = () => {
 
   const clearCart = async () => {
     try {
-      await axios.delete(`http://localhost:5003/books/cart/clear`);
+      await axios.delete(`https://backend-project-2-ubew.onrender.com/books/cart/clear`);
       fetchCart();
       showPopup("❌ Cart cleared");
     } catch {
@@ -45,7 +45,7 @@ const Cart = () => {
   const updateQuantity = async (id, quantity) => {
     if (quantity < 1) return;
     try {
-      await axios.put(`http://localhost:5003/books/cart/update/${id}`, { quantity });
+      await axios.put(`https://backend-project-2-ubew.onrender.com/books/cart/update/${id}`, { quantity });
       fetchCart();
     } catch {
       showPopup("❌ Could not update quantity");
