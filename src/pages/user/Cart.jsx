@@ -111,7 +111,7 @@ const Cart = () => {
                   <img
                     src={
                       item.bookId.image
-                        ? `http://localhost:5003/uploads/${item.bookId.image}`
+                        ? `https://backend-project-2-ubew.onrender.com/uploads/${item.bookId.image}`
                         : "https://via.placeholder.com/150"
                     }
                     alt={item.bookId.title}
