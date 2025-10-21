@@ -78,7 +78,7 @@ const Viewbooks = () => {
                 <img
                   src={
                     book.image
-                      ? `https://backend-project-2-ubew.onrender.com/${book.image}`
+                      ? `https://backend-project-2-ubew.onrender.com/uploads/${book.image}`
                       : "https://via.placeholder.com/150"
                   }
                   alt={book.title}
