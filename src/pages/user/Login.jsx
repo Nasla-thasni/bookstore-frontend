@@ -21,6 +21,7 @@ const Login = () => {
         password: formData.password,
       });
       // 🔗 Later: send login request to backend
+  
     } else {
       if (formData.password !== formData.confirmPassword) {
         alert("Passwords do not match!");
@@ -78,7 +79,7 @@ const Login = () => {
             <input
               type="password"
               name="password"
-              value={formData.password}
+              value={formData.password} 
               onChange={handleChange}
               required
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
